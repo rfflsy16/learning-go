@@ -11,8 +11,9 @@ func main() {
 	db := database.Connect()
 
 	// Seed data (termasuk migrasi)
-	seed.Products(db)
 	seed.Users(db)
+	seed.Products(db)
+	seed.Categories(db)
 
 	log.Println("✅ All data migrated and seeded successfully")
 }

@@ -2,8 +2,9 @@ package main
 
 import (
 	"log"
-	"rest-api-go/internal/module/product"
 	"rest-api-go/internal/module/user"
+	"rest-api-go/internal/module/product"
+	"rest-api-go/internal/module/category"
 	"rest-api-go/pkg/config"
 	"rest-api-go/pkg/database"
 	"rest-api-go/pkg/middleware"
@@ -26,8 +27,9 @@ func main() {
 	api := r.Group("/api")
 
 	// Initialize modules
-	product.Initialize(db, api)
 	user.Initialize(db, api)
+	product.Initialize(db, api)
+	category.Initialize(db, api)
 
 	// Start server
 	log.Printf("🚀 Server running on port %s", cfg.ServerPort)
