@@ -21,7 +21,6 @@ func (p *Category) Validate() error {           // Method untuk validasi struct 
 }
 
 
-
 //  {{{ Penjelasan Struktur Category }}}
 
 /*
