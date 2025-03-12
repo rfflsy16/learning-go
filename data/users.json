@@ -1,0 +1,52 @@
+[
+    {
+        "username": "Framework",
+        "email": "Sit",
+        "password": "Ipsum"
+    },
+    {
+        "username": "Sit",
+        "email": "Sit",
+        "password": "Kontas"
+    },
+    {
+        "username": "Node",
+        "email": "Bun",
+        "password": "Amet"
+    },
+    {
+        "username": "Framework",
+        "email": "Node",
+        "password": "Bun"
+    },
+    {
+        "username": "Framework",
+        "email": "TypeScript",
+        "password": "Lorem"
+    },
+    {
+        "username": "Sit",
+        "email": "Sit",
+        "password": "Dolor"
+    },
+    {
+        "username": "Ipsum",
+        "email": "Ipsum",
+        "password": "Node"
+    },
+    {
+        "username": "TypeScript",
+        "email": "Bun",
+        "password": "Sit"
+    },
+    {
+        "username": "Sit",
+        "email": "Dolor",
+        "password": "TypeScript"
+    },
+    {
+        "username": "Kontas",
+        "email": "Kontas",
+        "password": "Ipsum"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Kontas",
+        "price": 28,
+        "description": "TypeScript"
+    },
+    {
+        "title": "Sit",
+        "price": 70,
+        "description": "Framework"
+    },
+    {
+        "title": "Dolor",
+        "price": 1,
+        "description": "Bun"
+    },
+    {
+        "title": "Node",
+        "price": 1,
+        "description": "Bun"
+    },
+    {
+        "title": "Lorem",
+        "price": 87,
+        "description": "Framework"
+    },
+    {
+        "title": "Lorem",
+        "price": 60,
+        "description": "Lorem"
+    },
+    {
+        "title": "Kontas",
+        "price": 4,
+        "description": "Ipsum"
+    },
+    {
+        "title": "TypeScript",
+        "price": 50,
+        "description": "Framework"
+    },
+    {
+        "title": "Ipsum",
+        "price": 30,
+        "description": "Sit"
+    },
+    {
+        "title": "Kontas",
+        "price": 31,
+        "description": "Node"
+    }
+]

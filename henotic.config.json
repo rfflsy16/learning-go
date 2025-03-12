@@ -1,0 +1,6 @@
+{
+  "language": "golang",
+  "framework": "gin",
+  "database": "mariadb",
+  "projectDir": ""
+}
