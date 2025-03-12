@@ -11,9 +11,10 @@ func main() {
 	db := database.Connect()
 
 	// Seed data (termasuk migrasi)
-	seed.Users(db)
-	seed.Products(db)
+	// Seed categories first, then products to maintain foreign key integrity
 	seed.Categories(db)
+	seed.Products(db)
+	seed.Users(db)
 
 	log.Println("✅ All data migrated and seeded successfully")
 }

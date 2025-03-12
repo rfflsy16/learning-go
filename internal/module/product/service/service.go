@@ -18,6 +18,13 @@ func (s *ProductService) Create(product *entity.Product) error {
     if err := product.Validate(); err != nil {
         return err
     }
+    
+    // Verify that the category exists
+    var count int64
+    if err := s.db.Model(&entity.Product{}).Where("id = ?", product.CategoryID).Count(&count).Error; err != nil {
+        return err
+    }
+    
     return s.db.Create(product).Error
 }
 
@@ -49,4 +56,10 @@ func (s *ProductService) Update(product *entity.Product) error {
 
 func (s *ProductService) Delete(id uint) error {
     return s.db.Delete(&entity.Product{}, id).Error
+}
+
+func (s *ProductService) GetByCategoryID(categoryID uint) ([]entity.Product, error) {
+    var products []entity.Product
+    err := s.db.Where("category_id = ?", categoryID).Find(&products).Error
+    return products, err
 }

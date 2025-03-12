@@ -97,3 +97,21 @@ func (h *ProductHandler) Delete(c *gin.Context) {
 
     c.JSON(http.StatusOK, utils.SuccessResponse("Product deleted successfully"))
 }
+
+// Add this method to the existing ProductHandler struct
+
+func (h *ProductHandler) GetByCategoryID(c *gin.Context) {
+    categoryID, err := strconv.ParseUint(c.Param("categoryId"), 10, 32)
+    if err != nil {
+        c.JSON(http.StatusBadRequest, utils.ErrorResponse("Invalid Category ID"))
+        return
+    }
+
+    products, err := h.service.GetByCategoryID(uint(categoryID))
+    if err != nil {
+        c.JSON(http.StatusInternalServerError, utils.ErrorResponse(err.Error()))
+        return
+    }
+
+    c.JSON(http.StatusOK, utils.SuccessResponse(products))
+}

@@ -23,13 +23,13 @@ func (s *CategoryService) Create(category *entity.Category) error {
 
 func (s *CategoryService) GetByID(id uint) (*entity.Category, error) {
     var category entity.Category
-    err := s.db.First(&category, id).Error
+    err := s.db.Preload("Products").First(&category, id).Error
     return &category, err
 }
 
 func (s *CategoryService) GetAll() ([]entity.Category, error) {
     var categories []entity.Category
-    err := s.db.Find(&categories).Error
+    err := s.db.Preload("Products").Find(&categories).Error
     return categories, err
 }
 
