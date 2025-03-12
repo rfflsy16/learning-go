@@ -22,3 +22,6 @@ go.work
 
 # Database files
 *.db
+
+# Henotic config file
+henotic.config.json
