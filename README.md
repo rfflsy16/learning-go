@@ -7,7 +7,6 @@ This is a RESTful API built with Go (Golang) that implements a clean architectur
 ## Project Structure
 The project follows a well-organized structure that separates concerns and promotes maintainability:
 
-```plaintext
 rest-api-go/
 ├── cmd/                  # Command-line applications
 │   ├── main/             # Main application
